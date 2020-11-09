@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bs4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fa47/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/semiproject.css">
+    <title>부트스트랩4-index</title>
+</head>
+<body>
+<div class="container">
+    <header><!-- 상단로고/로그인,회원가입버튼 -->
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Lorem Ipsum</h1>
+            </div>
+            <div class="col-md-6 text-right">
+                <h1><button type="button"
+                    class="btn btn-danger"
+                    data-toggle="modal"
+                    data-target="#loginmodal">로그인</button>
+                <button type="button"
+                    class="btn btn-primary"
+                        id="joinbtn">회원가입</button></h1>
+            </div>
+        </div>
+    </header>
+    <nav class="nav navbar-expand-md navbar-dark bg-dark">
+        <ul class="nav navbar-nav nav-fill w-100">
+            <li class="nav-item"><a class="nav-link" href="">프로젝트소개</a></li>
+            <li class="nav-item"><a class="nav-link" href="">회원가입</a></li>
+            <li class="nav-item"><a class="nav-link" href="">게시판</a></li>
+            <li class="nav-item"><a class="nav-link" href="">자료실</a></li>
+            <li class="nav-item"><a class="nav-link" href="">갤러리</a></li>
+            <li class="nav-item"><a class="nav-link" href="">관리자</a></li>
+        </ul>
+    </nav>
+
+<!-- 메인영역 시작 -->
+
+<div id="main">
+        <div class="margin30">
+            <i class="fa fa-comments fa-2x"> 자유게시판</i>
+            <hr>
+        </div> <!-- 타이틀 -->
+
+        <div class="row margin1050">
+            <div class="col-6">
+                <button type="button" id="prevbd"
+                        class="btn btn-light"
+                        style="margin-left: -14px">
+                    <i class="fa fa-chevron-left"> </i>
+                    이전게시물
+                </button>
+                <button type="button" id="nextbd"
+                        class="btn btn-light">
+                    <i class="fa fa-chevron-right"> </i>
+                    다음게시물
+                </button>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" id="newbd"
+                        class="btn btn-light"
+                        style="margin-right: -14px">
+                    <i class="fa fa-plus-circle"> </i>
+                    새글쓰기
+                </button>
+            </div>
+        </div><!-- 버튼들 -->
+
+        <div class="row margin1050">
+            <table class="table">
+                <tr><th colspan="2"
+                    style="border-bottom: 3px solid black;
+                           background: #dff0f8">
+                    <h3>${b.title}</h3>
+                </th></tr>
+                <tr style="background: #ccff99">
+                    <td class="text-left">${b.userid}</td>
+                    <td class="text-right">${b.regdate} / ${b.views} / ${b.thumbup}</td></tr>
+                <tr style="background: #ffffcc">
+                    <td colspan="2" class="text-left"
+                        style="border-bottom: 3px solid black;">${b.contents}</td></tr>
+            </table>
+        </div><!-- 본문 -->
+
+        <div class="row margin1050">
+            <div class="col-6">
+                <button type="button" id="updbd"
+                        class="btn btn-warning"
+                        style="margin-left: -14px">
+                    <i class="fa fa-pencil"> </i>
+                    수정하기
+                </button>
+                <button type="button" id="delbd"
+                        class="btn btn-danger">
+                    <i class="fa fa-trash-o"> </i>
+                    삭제하기
+                </button>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" id="lstbd"
+                        class="btn btn-light"
+                        style="margin-right: -14px">
+                    <i class="fa fa-list"> </i>
+                    목록으로
+                </button>
+            </div>
+        </div><!-- 버튼들 -->
+
+        <div class="row margin1050">
+            <h3 style="margin-top: 45px"><i class="fa fa-commenting"></i> 나도 한마디</h3>
+            <table class="table" style="border-top: 3px solid black;
+                                        border-bottom:3px solid black">
+                <tr><td style="width:25%" class="text-left"><h4>zzyigy</h4></td>
+                    <td>
+                        <div style="background: yellow; padding: 5px 0">2012-02-08 14:43:49</div>
+                        <p style="padding: 5px 0">지금도 등골 브레이커 맞습니다.<br>
+                            애들 레고교육센터인가 뭔가 보낼려다가...학원비는 둘째치고, <br>
+                           재료비에서 깜놀...<br><br>
+                            그냥 작은 거 사다가 애들하고 맞추고 놀고 있습죠 ^^</p>
+                        <ul class="list-unstyled"><!-- 댓글의 댓글 시작 -->
+                            <li>
+                                <div style="background: lime; padding: 5px 0">
+                                    <span><b>zzyzzy</b></span>
+                                    <span style="float: right">2012-02-08 14:50:35</span></div>
+                                <p style="padding: 5px 0">정말인가요? 우아~ 심하다!~</p>
+                            </li>
+                        </ul>
+                    </td></tr>
+
+                <tr><td style="width:25%" class="text-left"><h4>zzyigy</h4></td>
+                    <td>
+                        <div style="background: yellow; padding: 5px 0">2012-02-08 14:43:49</div>
+                        <p style="padding: 5px 0">지금도 등골 브레이커 맞습니다.<br>
+                            애들 레고교육센터인가 뭔가 보낼려다가...학원비는 둘째치고, <br>
+                            재료비에서 깜놀...<br><br>
+                            그냥 작은 거 사다가 애들하고 맞추고 놀고 있습죠 ^^</p>
+                    </td></tr>
+
+                <tr><td style="width:25%" class="text-left"><h4>zzyigy</h4></td>
+                    <td>
+                        <div style="background: yellow; padding: 5px 0">2012-02-08 14:43:49</div>
+                        <p style="padding: 5px 0">지금도 등골 브레이커 맞습니다.<br>
+                            애들 레고교육센터인가 뭔가 보낼려다가...학원비는 둘째치고, <br>
+                            재료비에서 깜놀...<br><br>
+                            그냥 작은 거 사다가 애들하고 맞추고 놀고 있습죠 ^^</p>
+                    </td></tr>
+
+                <tr><td style="width:25%" class="text-left"><h4>zzyigy</h4></td>
+                    <td>
+                        <div style="background: yellow; padding: 5px 0">2012-02-08 14:43:49</div>
+                        <p style="padding: 5px 0">지금도 등골 브레이커 맞습니다.<br>
+                            애들 레고교육센터인가 뭔가 보낼려다가...학원비는 둘째치고, <br>
+                            재료비에서 깜놀...<br><br>
+                            그냥 작은 거 사다가 애들하고 맞추고 놀고 있습죠 ^^</p>
+                    </td></tr>
+
+                <tr><td style="width:25%" class="text-left"><h4>zzyigy</h4></td>
+                    <td>
+                        <div style="background: yellow; padding: 5px 0">2012-02-08 14:43:49</div>
+                        <p style="padding: 5px 0">지금도 등골 브레이커 맞습니다.<br>
+                            애들 레고교육센터인가 뭔가 보낼려다가...학원비는 둘째치고, <br>
+                            재료비에서 깜놀...<br><br>
+                            그냥 작은 거 사다가 애들하고 맞추고 놀고 있습죠 ^^</p>
+                    </td></tr>
+
+
+            </table>
+        </div><!-- 댓글 -->
+
+        <div class="row margin1050">
+            <form class="card card-body bg-light"
+                style="margin: 30px 0;">
+                <div class="form-group row">
+                    <label style="margin:auto">로그인하세요</label>
+
+                    <textarea id="comment" rows="10"
+                        class="form-control col-7"></textarea>
+
+                    <button type="button" id="bdcmt"
+                        class="btn btn-dark" style="margin:auto">
+                        <i class="fa fa-commenting"></i>
+                        댓글쓰기</button>
+                </div>
+            </form>
+        </div><!-- 댓글쓰기 -->
+
+    </div>
+
+<!-- 메인영역 끝 -->
+
+    <footer>
+        <h6 class="bg-light text-right">Copyright &copy; Lorem Ipsum 2020.
+            All right Reserved. Created by Bootstrap4.</h6>
+    </footer>
+</div>
+
+<!-- 로그인 모달 시작 -->
+<div id="loginmodal" class="modal fade" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">로그인</h3>
+                <button class="btn btn-light" type="button"
+                        data-dismiss="modal">닫기</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginfrm">
+                    <div class="form-group row text-center">
+                        <label for="uid"
+                               class="col-form-label col-4">아이디</label>
+                        <input type="text" id="uid"
+                               class="form-control col-6">
+                    </div>
+                    <div class="form-group row text-center">
+                        <label for="pwd"
+                                class="col-form-label col-4">비밀번호</label>
+                        <input type="password" id="pwd"
+                                class="form-control col-6">
+                    </div>
+                    <div class="form-group row text-center">
+                        <div class="col-4"></div>
+                        <div class="form-check">
+                            <input type="checkbox"
+                                   class="form-check-input">
+                            <label class="form-check-label">
+                                로그인 상태 유지</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button"
+                        class="btn btn-danger">로그인</button>
+                <button type="button"
+                        class="btn btn-success">아이디/비밀번호 찾기</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 로그인 모달 끝 -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="bs4/js/bootstrap.min.js"></script>
+</body>
+</html>
