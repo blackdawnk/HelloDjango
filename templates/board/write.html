@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="bs4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="fa47/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/semiproject.css">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bs4/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fa47/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/semiproject.css' %}">
     <title>부트스트랩4-index</title>
 </head>
 <body>
@@ -87,7 +89,7 @@
                 <div class="form-group row">
                     <label class="col-form-label col-2 text-right">
                         자동가입방지</label>
-                    <img src="../img/google_recaptcha.gif"
+                    <img src="{% static 'img/google_recaptcha.gif'%}"
                          width="50%" height="50%"
                          style="margin-left: -5px">
                 </div><!-- 자동가입방지 -->
@@ -164,6 +166,6 @@
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="bs4/js/bootstrap.min.js"></script>
+<script src="{% static 'bs4/js/bootstrap.min.js' %}"></script>
 </body>
 </html>
