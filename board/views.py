@@ -33,9 +33,10 @@ def write(request):
         form = BoardForm()
     return render(request, 'board/write.html', {'form': form})
 
-def update(request):
-
-    return render(request, 'board/update.html')
+def update(request, bid):
+    board = Board.objects.get(id=bid)
+    bd = {'bd': board}
+    return render(request, 'board/update.html', bd)
 
 def delete(request, bid):
     bd = Board.objects.get(id=bid)
