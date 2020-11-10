@@ -59,6 +59,21 @@
         - 기본문서 불러오기 : {% extends 'base.html' %}
         - {% block content %}와 {% endblock %} 사이에 메인 소스 작성
 ------
+# 모델
+* Django는 ORM(Object Relation Mapping)기능을 사용하기 때문에 SQL쿼리 없이 DB관련 작업 가능
+* Model의 클래스를 생성하면, 해당 모델에 상응하는 테이블을 자동으로 만들어 줌
+* 
+
+------
+# Django 모델 APi
+- Django 모델에 CRUD 사용을 위해 Django shell 사용
+    - python manage.py shell
+- 모델을 패키지처럼 불러오기
+    - form board.models import Board
+- 모델에 insert
+    - dddd
+
+------
 # git 계정 연동 아이디 확인 및 변경
 * github에 소스를 commit/ push 할 때 사용하는 계정
     1. 확인
