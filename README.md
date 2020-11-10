@@ -66,7 +66,7 @@
         - git config user.email
     2. 변경
         - git config --global user.name 변경할이름
-        - git config --global user.name 변경할이름
+        - git config --global user.email 변경할이메일
 -----
 # Push 할 때 오류 발생하면, 윈도우 자격증명을 수정
     - 제어판 - 사용자계정 - 자격증명관리 - windows 자격증명 - github 항목 삭제 후 다시 github 계정 수정
