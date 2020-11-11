@@ -21,6 +21,7 @@ from board import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('board/', views.index)
-    path('board/', include('board.urls'))
+    path('board/', include('board.urls')),
+    path('rest/', include('rest.urls'))
 ]
 
