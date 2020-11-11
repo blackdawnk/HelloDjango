@@ -56,13 +56,12 @@
 
         <div class="row margin1050">
             <div class="col-6">
-                <button type="button" id="updbd"
+                <a href="/board/update/{{bd.id}}" id="updbd"
                         class="btn btn-warning"
-                        style="margin-left: -14px"
-                        onclick="location.href='/board/update/{{bd.id}}'">
+                        style="margin-left: -14px">
                     <i class="fa fa-pencil"> </i>
                     수정하기
-                </button>
+                </a>
                 <button type="button" id="delbd"
                         class="btn btn-danger"
                         onclick="areyoudelete('{{bd.id}}')">

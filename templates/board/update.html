@@ -27,7 +27,21 @@
     </div><!-- 버튼들 -->
 
     <div class="row mgnpdg15">
-        <form class="card card-body bg-light">
+        <form class="card card-body bg-light" method="post" name = "updfrm">
+            {% csrf_token %}
+                <!-- 오류표시 Start -->
+                {% if form.errors %}
+                    <div class="alert alert-danger" role="alert">
+                    {% for field in form %}
+                        {% if field.errors %}
+                        <strong>{{ field.label }}</strong>
+                        {{ field.errors }}
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                {% endif %}
+                <!-- 오류표시 End -->
+
             <div class="form-group row">
                 <label class="col-form-label col-2 text-right">
                     제목</label>
@@ -64,9 +78,9 @@
                 <button type="submit" class="btn btn-primary">
                     <i class="fa fa-pencil-square-o"></i>수정하기
                 </button>&nbsp;
-                <button type="reset" class="btn btn-danger">
+                <a href="{% url 'board:list' %}" class="btn btn-danger">
                     <i class="fa fa-remove"></i>취소하기
-                </button>
+                </a>
             </div><!-- 버튼들 -->
 
         </form>
